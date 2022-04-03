@@ -6,8 +6,9 @@ import { useMediaQuery } from "react-responsive";
 import { TiThMenuOutline } from "react-icons/ti";
 import { RiHome2Fill, RiFolderInfoFill } from "react-icons/ri";
 import { FaNewspaper } from "react-icons/fa";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { IoMdPhotos } from "react-icons/io";
-const Header = () => {
+const Header = ({ darkMode, setDarkMode }) => {
 	const [openMenu, setOpenMenu] = useState(false);
 	const toggleMobileMenu = (event) => {
 		setOpenMenu(event.currentTarget);
@@ -18,6 +19,9 @@ const Header = () => {
 	const isMobile = useMediaQuery({
 		query: "(max-width: 786px)",
 	});
+	const toggleColorMode = () => {
+		setDarkMode(!darkMode);
+	};
 	const renderMobileMenu = () => {
 		return (
 			<>
@@ -75,12 +79,20 @@ const Header = () => {
 				>
 					<RiFolderInfoFill /> &nbsp; About
 				</IconButton>
+				<IconButton
+					color="inherit"
+					size="large"
+					style={{ borderRadius: "0", marginRight: "10px" }}
+					onClick={toggleColorMode}
+				>
+					{darkMode ? <MdDarkMode /> : <MdLightMode />}
+				</IconButton>
 			</>
 		);
 	};
 	return (
 		<div className="header">
-			<AppBar position="fixed" color="secondary">
+			<AppBar position="fixed" color="primary">
 				<div className="appbar">
 					<div className="left">
 						<IconButton

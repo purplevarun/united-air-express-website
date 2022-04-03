@@ -1,18 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import About from "./pages/About/About";
-import Homepage from "./pages/Homepage/Homepage";
-
+import Router from "./Router";
+import lightTheme from "./themes/lightTheme";
+import darkTheme from "./themes/darkTheme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { useState } from "react";
 function App() {
+	const [darkMode, setDarkMode] = useState(false);
 	return (
 		<div className="App">
-			<BrowserRouter>
-				<Routes>
-					<Route element={<Homepage />} path="/" exact />
-					<Route element={<About />} path="/about" exact />
-					<Route element={<Homepage />} path="*" />
-				</Routes>
-			</BrowserRouter>
+			<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+				<CssBaseline />
+				<Router darkMode={darkMode} setDarkMode={setDarkMode} />
+			</ThemeProvider>
 		</div>
 	);
 }

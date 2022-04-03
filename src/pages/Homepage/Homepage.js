@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "./../../components/Header/Header";
-const Homepage = () => {
+const Homepage = ({ darkMode, setDarkMode }) => {
 	return (
 		<div className="homepage">
-			<Header />
+			<Header darkMode={darkMode} setDarkMode={setDarkMode} />
 		</div>
 	);
 };
