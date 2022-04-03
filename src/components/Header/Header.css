@@ -1,18 +1,17 @@
 .appbar {
 	display: flex;
 	justify-content: space-between;
-	/* background-color: red; */
 	width: 100%;
 	min-height: 10vh;
 	align-items: center;
 }
 .right {
-	/* background-color: green; */
-	margin-right: 40px;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
 }
 .left {
 	margin-left: 10px;
-	/* background-color: blue; */
 	display: flex;
 	align-items: center;
 }
