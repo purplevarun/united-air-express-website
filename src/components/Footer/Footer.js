@@ -6,9 +6,10 @@ import {
 	FaTwitterSquare,
 	FaWhatsappSquare,
 } from "react-icons/fa";
+import { GiClick } from "react-icons/gi";
 const Footer = ({ darkMode }) => {
 	const getBg = () => {
-		if (darkMode) return "darkgrey";
+		if (darkMode) return "orange";
 		else return "black";
 	};
 	const getFg = () => {
@@ -53,6 +54,9 @@ const Footer = ({ darkMode }) => {
 				className="creds"
 			>
 				Made By Varun Kedia
+				<IconButton color="inherit" size="medium">
+					<GiClick />
+				</IconButton>
 			</Typography>
 		</div>
 	);
