@@ -1,5 +1,5 @@
 import "./App.css";
-import Router from "./Router";
+import Router from "./router/Router";
 import lightTheme from "./themes/lightTheme";
 import darkTheme from "./themes/darkTheme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
