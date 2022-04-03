@@ -4,39 +4,25 @@ import About from "./pages/About/About";
 import Homepage from "./pages/Homepage/Homepage";
 
 const Router = ({ darkMode, setDarkMode }) => {
+	const darkModeProps = {
+		darkMode,
+		setDarkMode,
+	};
 	return (
 		<div>
 			<BrowserRouter>
 				<Routes>
 					<Route
-						element={
-							<Homepage
-								darkMode={darkMode}
-								setDarkMode={setDarkMode}
-							/>
-						}
+						element={<Homepage {...darkModeProps} />}
 						path="/"
 						exact
 					/>
 					<Route
-						element={
-							<About
-								darkMode={darkMode}
-								setDarkMode={setDarkMode}
-							/>
-						}
+						element={<About {...darkModeProps} />}
 						path="/about"
 						exact
 					/>
-					<Route
-						element={
-							<Homepage
-								darkMode={darkMode}
-								setDarkMode={setDarkMode}
-							/>
-						}
-						path="*"
-					/>
+					<Route element={<Homepage {...darkModeProps} />} path="*" />
 				</Routes>
 			</BrowserRouter>
 		</div>

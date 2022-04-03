@@ -12,7 +12,12 @@ const MobileMenu = () => {
 	};
 	return (
 		<>
-			<IconButton color="inherit" size="large" onClick={toggleMobileMenu}>
+			<IconButton
+				color="inherit"
+				size="large"
+				onClick={toggleMobileMenu}
+				style={{ borderRadius: 0 }}
+			>
 				<TiThMenuOutline />
 			</IconButton>
 			<Menu open={openMenu} anchorEl={openMenu} onClose={closeMobileMenu}>

@@ -14,8 +14,10 @@ const Header = ({ darkMode, setDarkMode }) => {
 		setDarkMode(!darkMode);
 	};
 	const darkModeProps = {
-		darkMode: darkMode,
-		toggleColorMode: toggleColorMode,
+		// this is different from the darkModeProps in Router.js
+		// this one has "toggleColorMode" instead of "setDarkMode"
+		darkMode,
+		toggleColorMode,
 	};
 	return (
 		<div className="header">
