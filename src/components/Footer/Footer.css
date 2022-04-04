@@ -11,3 +11,8 @@
 	display: flex;
 	align-items: center;
 }
+.social-icons {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}

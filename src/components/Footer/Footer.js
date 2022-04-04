@@ -1,4 +1,4 @@
-import { IconButton, Typography } from "@mui/material";
+import { Box, Container, IconButton, Typography } from "@mui/material";
 import React from "react";
 import "./Footer.css";
 import {
@@ -8,23 +8,6 @@ import {
 } from "react-icons/fa";
 import { GiClick } from "react-icons/gi";
 const Footer = ({ darkMode }) => {
-	const getBg = () => {
-		if (darkMode) return "orange";
-		else return "black";
-	};
-	const getFg = () => {
-		if (darkMode) return "black";
-		else return "white";
-	};
-	const footerStyles = {
-		backgroundColor: getBg(),
-		color: getFg(),
-		padding: "0px",
-		display: "flex",
-		justifyContent: "space-evenly",
-		flexDirection: "column",
-		alignItems: "center",
-	};
 	const gotoVarunProfile = () => {
 		const varunLinkedIn = "https://www.linkedin.com/in/purplevarun/";
 		window.open(varunLinkedIn, "_blank");
@@ -32,8 +15,25 @@ const Footer = ({ darkMode }) => {
 	const gotoFacebook = () => {};
 	const gotoWhatsapp = () => {};
 	const gotoTwitter = () => {};
+	const getBgColor = () => {
+		if (darkMode) return "black";
+		else return "darkgray";
+	};
+	const getFgColor = () => {
+		if (darkMode) return "white";
+		else return "black";
+	};
 	return (
-		<div className="footer" style={footerStyles}>
+		<div
+			style={{
+				justifyContent: "center",
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "center",
+				backgroundColor: getBgColor(),
+				color: getFgColor(),
+			}}
+		>
 			<Typography variant="body" style={{ paddingTop: "10px" }}>
 				United Air Express Private Limited Est. 2022
 			</Typography>
@@ -49,11 +49,11 @@ const Footer = ({ darkMode }) => {
 				</IconButton>
 			</div>
 			<Typography
-				variant="caption"
+				variant="body2"
 				onClick={gotoVarunProfile}
 				className="creds"
 			>
-				Made By Varun Kedia
+				Developed By Varun Kedia
 				<IconButton color="inherit" size="medium">
 					<GiClick />
 				</IconButton>
