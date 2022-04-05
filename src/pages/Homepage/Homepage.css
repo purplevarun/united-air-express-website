@@ -1,4 +1,10 @@
 .homepage {
 	display: flex;
-	min-height: 100vh;
+	min-height: 80vh;
+	flex-direction: column;
+}
+.animated-text {
+	/* background-color: red; */
+	padding-top: 20px;
+	text-align: center;
 }

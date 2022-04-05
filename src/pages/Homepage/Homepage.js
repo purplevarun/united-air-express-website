@@ -1,29 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "./Homepage.css";
 import bgimg from "./../../images/background.jpg";
-import homepage_bg from "./../../images/homepage_bg.jpg";
-import { Snackbar, SnackbarContent } from "@mui/material";
+import uae_front from "./../../images/homepage_bg.jpg";
+import { Grow, Slide, Typography } from "@mui/material";
 const Homepage = () => {
 	const isMobile = useMediaQuery({
 		query: "(max-width: 786px)",
 	});
-	const toastPosition = {
-		vertical: "bottom",
-		horizontal: "center",
+	const renderFrontImageMobile = () => {
+		return (
+			<>
+				<img src={uae_front} alt="" width="100%" height="100%" />
+			</>
+		);
 	};
-	const [openToast, setOpenToast] = useState(false);
-	const closeToast = () => {
-		setOpenToast(false);
+	const renderFrontImageDesktop = () => {
+		return (
+			<div
+				style={{
+					width: "100%",
+					textAlign: "center",
+					height: "100%",
+					paddingTop: "40px",
+				}}
+			>
+				<img src={uae_front} alt="" width="500px" height="100%" />
+			</div>
+		);
 	};
+	const [growText, setGrowText] = useState(false);
 	useEffect(() => {
 		setTimeout(() => {
-			setOpenToast(true);
-			setTimeout(() => {
-				closeToast();
-			}, 5000);
+			setGrowText(true);
 		}, 2000);
-	}, []);
+	});
+	const containerRef = useRef(null);
 	return (
 		<div
 			className="homepage"
@@ -32,17 +44,22 @@ const Homepage = () => {
 				backgroundRepeat: "repeat-y",
 			}}
 		>
-			<Snackbar
-				open={openToast}
-				onClose={closeToast}
-				anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
-			>
-				<img
-					src={homepage_bg}
-					alt=""
-					width={isMobile ? "100%" : "500px"}
-				/>
-			</Snackbar>
+			<>
+				{isMobile
+					? renderFrontImageMobile()
+					: renderFrontImageDesktop()}
+			</>
+			<div className="animated-text" ref={containerRef}>
+				<Slide
+					in={growText}
+					direction="right"
+					container={containerRef.current}
+				>
+					<Typography variant="h4">
+						Welcome to United Air Express
+					</Typography>
+				</Slide>
+			</div>
 		</div>
 	);
 };

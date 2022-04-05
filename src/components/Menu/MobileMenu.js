@@ -2,7 +2,12 @@ import { IconButton, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
 import { TiThMenuOutline } from "react-icons/ti";
 
-const MobileMenu = () => {
+const MobileMenu = ({
+	gotoHomepage,
+	gotoAboutpage,
+	gotoGallerypage,
+	gotoApplypage,
+}) => {
 	const [openMenu, setOpenMenu] = useState(false);
 	const toggleMobileMenu = (event) => {
 		setOpenMenu(event.currentTarget);
@@ -21,10 +26,10 @@ const MobileMenu = () => {
 				<TiThMenuOutline />
 			</IconButton>
 			<Menu open={openMenu} anchorEl={openMenu} onClose={closeMobileMenu}>
-				<MenuItem onClick={closeMobileMenu}>Home</MenuItem>
-				<MenuItem onClick={closeMobileMenu}>Apply</MenuItem>
-				<MenuItem onClick={closeMobileMenu}>Gallery</MenuItem>
-				<MenuItem onClick={closeMobileMenu}>About</MenuItem>
+				<MenuItem onClick={gotoHomepage}>Home</MenuItem>
+				<MenuItem onClick={gotoApplypage}>Apply</MenuItem>
+				<MenuItem onClick={gotoGallerypage}>Gallery</MenuItem>
+				<MenuItem onClick={gotoAboutpage}>About</MenuItem>
 			</Menu>
 		</>
 	);

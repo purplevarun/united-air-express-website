@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import DesktopMenu from "./../Menu/DesktopMenu";
 import MobileMenu from "./../Menu/MobileMenu";
 import DarkModeButton from "./../Menu/DarkModeButton";
+import { useNavigate } from "react-router-dom";
 const Header = ({ darkMode, setDarkMode }) => {
 	const isMobile = useMediaQuery({
 		query: "(max-width: 786px)",
@@ -18,6 +19,14 @@ const Header = ({ darkMode, setDarkMode }) => {
 		// this one has "toggleColorMode" instead of "setDarkMode"
 		darkMode,
 		toggleColorMode,
+	};
+	const navigate = useNavigate();
+
+	const navigator = {
+		gotoHomepage: () => navigate("/"),
+		gotoAboutpage: () => navigate("/about"),
+		gotoApplypage: () => navigate("/apply"),
+		gotoGallerypage: () => navigate("/gallery"),
 	};
 	return (
 		<div className="header">
@@ -36,7 +45,11 @@ const Header = ({ darkMode, setDarkMode }) => {
 						</IconButton>
 					</div>
 					<div className="right">
-						{isMobile ? <MobileMenu /> : <DesktopMenu />}
+						{isMobile ? (
+							<MobileMenu {...navigator} />
+						) : (
+							<DesktopMenu {...navigator} />
+						)}
 						<DarkModeButton {...darkModeProps} />
 					</div>
 				</div>
