@@ -2,9 +2,22 @@
 	display: flex;
 	min-height: 80vh;
 	flex-direction: column;
+	overflow: hidden;
 }
 .animated-text {
-	/* background-color: red; */
-	padding-top: 20px;
+	padding-top: 10px;
 	text-align: center;
+}
+.clickable {
+	color: teal;
+	cursor: pointer;
+}
+.animated-text-loop {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 20vh;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	align-items: center;
 }

@@ -12,6 +12,7 @@ const Router = ({ darkMode, setDarkMode }) => {
 		darkMode,
 		setDarkMode,
 	};
+
 	return (
 		<div className="mainbody">
 			<div className="routes">
