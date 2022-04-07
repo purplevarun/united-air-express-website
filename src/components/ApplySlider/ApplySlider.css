@@ -1,0 +1,8 @@
+.animated-text {
+	padding-top: 10px;
+	text-align: center;
+}
+.clickable {
+	color: teal;
+	cursor: pointer;
+}

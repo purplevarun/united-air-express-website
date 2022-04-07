@@ -4,20 +4,3 @@
 	flex-direction: column;
 	overflow: hidden;
 }
-.animated-text {
-	padding-top: 10px;
-	text-align: center;
-}
-.clickable {
-	color: teal;
-	cursor: pointer;
-}
-.animated-text-loop {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 20vh;
-	padding-top: 20px;
-	padding-bottom: 10px;
-	align-items: center;
-}
