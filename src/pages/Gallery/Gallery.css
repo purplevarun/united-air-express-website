@@ -1,0 +1,12 @@
+.gallery {
+	display: flex;
+	min-height: 80vh;
+	flex-direction: column;
+	overflow: hidden;
+	align-content: center;
+}
+.slideshow-wrapper {
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+}
