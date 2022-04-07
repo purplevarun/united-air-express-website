@@ -1,11 +1,9 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import "./Homepage.css";
-import bgimg from "./../../images/background.jpg";
 import uae_front from "./../../images/homepage_bg.jpg";
-
 import ApplySlider from "../../components/ApplySlider/ApplySlider";
-const Homepage = () => {
+const Homepage = ({ backgroundStyles }) => {
 	const isMobile = useMediaQuery({
 		query: "(max-width: 786px)",
 	});
@@ -33,13 +31,7 @@ const Homepage = () => {
 	};
 
 	return (
-		<div
-			className="homepage"
-			style={{
-				backgroundImage: `url(${bgimg})`,
-				backgroundRepeat: "repeat-y",
-			}}
-		>
+		<div className="homepage" style={backgroundStyles}>
 			<>
 				{isMobile
 					? renderFrontImageMobile()

@@ -1,0 +1,43 @@
+.apply {
+	display: flex;
+	min-height: 80vh;
+	flex-direction: column;
+	overflow: hidden;
+	align-content: center;
+}
+
+.apply-btn-wrapper {
+	border-radius: 0px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.checkbox-wrapper {
+	width: 100%;
+	display: flex;
+	margin-top: 10px;
+	justify-content: center;
+	align-items: center;
+}
+.image-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.description-wrapper {
+	text-align: center;
+	margin-top: 20px;
+}
+.supervisor {
+	color: red;
+}
+.loader {
+	color: green;
+}
+.delivery-ass {
+	color: blue;
+}
+.station-staff {
+	color: yellow;
+}
