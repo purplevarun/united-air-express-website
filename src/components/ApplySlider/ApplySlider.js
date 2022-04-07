@@ -28,7 +28,7 @@ const ApplySlider = () => {
 					United Air Express
 				</Typography>
 			</Slide>
-			<div className="animated-text-loop">
+			<div className="animated-text-apply">
 				<Slide in={growText} direction="left">
 					<Typography variant="h5">
 						Click{" "}

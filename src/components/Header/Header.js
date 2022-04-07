@@ -36,6 +36,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 						<IconButton
 							color="inherit"
 							style={{ borderRadius: "0" }}
+							onClick={navigator.gotoHomepage}
 						>
 							<FiPackage />
 							&nbsp;

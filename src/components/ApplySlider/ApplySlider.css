@@ -5,4 +5,11 @@
 .clickable {
 	color: teal;
 	cursor: pointer;
+	border: 2px solid teal;
+	border-radius: 9px;
+	padding: 4px;
+	margin: 4px;
+}
+.animated-text-apply {
+	padding-top: 10px;
 }
