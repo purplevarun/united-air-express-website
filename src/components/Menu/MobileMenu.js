@@ -26,10 +26,38 @@ const MobileMenu = ({
 				<TiThMenuOutline />
 			</IconButton>
 			<Menu open={openMenu} anchorEl={openMenu} onClose={closeMobileMenu}>
-				<MenuItem onClick={gotoHomepage}>Home</MenuItem>
-				<MenuItem onClick={gotoApplypage}>Apply</MenuItem>
-				<MenuItem onClick={gotoGallerypage}>Gallery</MenuItem>
-				<MenuItem onClick={gotoAboutpage}>About</MenuItem>
+				<MenuItem
+					onClick={() => {
+						gotoHomepage();
+						closeMobileMenu();
+					}}
+				>
+					Home
+				</MenuItem>
+				<MenuItem
+					onClick={() => {
+						gotoApplypage();
+						closeMobileMenu();
+					}}
+				>
+					Apply
+				</MenuItem>
+				<MenuItem
+					onClick={() => {
+						gotoGallerypage();
+						closeMobileMenu();
+					}}
+				>
+					Gallery
+				</MenuItem>
+				<MenuItem
+					onClick={() => {
+						gotoAboutpage();
+						closeMobileMenu();
+					}}
+				>
+					About
+				</MenuItem>
 			</Menu>
 		</>
 	);

@@ -22,7 +22,6 @@ const Homepage = ({ backgroundStyles }) => {
 					width: "100%",
 					textAlign: "center",
 					height: "100%",
-					paddingTop: "40px",
 				}}
 			>
 				<img src={uae_front} alt="" width="500px" height="100%" />
