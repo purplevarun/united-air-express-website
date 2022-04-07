@@ -1,0 +1,7 @@
+.about {
+	display: flex;
+	min-height: 80vh;
+	flex-direction: column;
+	overflow: hidden;
+	align-items: center;
+}
