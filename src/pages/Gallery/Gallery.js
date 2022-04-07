@@ -39,7 +39,7 @@ const Gallery = ({ backgroundStyles }) => {
 				);
 			}, 1000);
 		}, 1000);
-	}, [imageIndex, len, slideDirection]);
+	}, [imageIndex]);
 	return (
 		<div className="gallery" style={backgroundStyles}>
 			<div className="slideshow-wrapper">
