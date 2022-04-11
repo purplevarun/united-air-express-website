@@ -19,6 +19,10 @@ import gallery16 from "./../../images/gallery16.jpg";
 import gallery17 from "./../../images/gallery17.jpg";
 import gallery18 from "./../../images/gallery18.jpg";
 import gallery19 from "./../../images/gallery19.jpg";
+import new_gallery1 from "./../../images/new_gallery1.JPG";
+import new_gallery2 from "./../../images/new_gallery2.JPG";
+import new_gallery3 from "./../../images/new_gallery3.JPG";
+import new_gallery4 from "./../../images/new_gallery4.JPG";
 
 import { Slide } from "@mui/material";
 import { useMediaQuery } from "react-responsive";
@@ -27,8 +31,12 @@ const Gallery = ({ backgroundStyles }) => {
 		query: "(max-width: 786px)",
 	});
 	const images = [
-		gallery2,
+		new_gallery1,
+		new_gallery2,
+		new_gallery3,
+		new_gallery4,
 		gallery1,
+		gallery2,
 		gallery3,
 		gallery4,
 		gallery5,
