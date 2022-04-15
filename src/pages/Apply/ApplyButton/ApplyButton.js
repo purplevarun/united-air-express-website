@@ -4,7 +4,7 @@ import { FaUserEdit } from "react-icons/fa";
 import "./ApplyButton.css";
 const ApplyButton = ({ darkMode }) => {
 	const gotoApplyForm = () => {
-		alert("pending!");
+		window.open("https://forms.gle/xUZW2kqon6k4nh7t6", "_blank");
 	};
 	return (
 		<div className="apply-button">
